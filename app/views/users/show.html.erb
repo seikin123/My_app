@@ -1,0 +1,4 @@
+<h1>User#show</h1>
+<%= attachment_image_tag @user, :profile_image, size: "40x40",fallback: "no_image.jpg"%>
+<%= @user.name%>
+<%= link_to '編集',edit_user_path(@user) %>
