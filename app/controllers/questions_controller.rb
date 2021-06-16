@@ -7,7 +7,7 @@ class QuestionsController < ApplicationController
   def create
     @register_quiz_form = RegisterQuizForm.new(create_question_params)
     if @register_quiz_form.save
-      redirect_to (成功したときのパス)
+      redirect_to questions_path
     else
       render :new
     end
