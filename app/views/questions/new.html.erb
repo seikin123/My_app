@@ -1,5 +1,5 @@
 <%= form_with model: @register_quiz_form, url: questions_path, local: true do |f| %>
-  <%= render '(エラーメッセージ表示用のパーシャル)', object: @register_quiz_form %>
+  <%# <%= render '(エラーメッセージ表示用のパーシャル)', object: @register_quiz_form %> 
   
   <div class="formgroup">
     <%= f.label :question_content %>
