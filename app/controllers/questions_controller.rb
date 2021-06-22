@@ -4,6 +4,14 @@ class QuestionsController < ApplicationController
     @register_quiz_form = RegisterQuizForm.new
   end
 
+  def index
+    @questions = Question.all
+  end
+
+  def show
+    @question = Question.find(params[:id])
+  end
+
   def create
     @register_quiz_form = RegisterQuizForm.new(create_question_params)
     if @register_quiz_form.save
