@@ -6,10 +6,13 @@ class QuestionsController < ApplicationController
 
   def index
     @questions = Question.all
+    @choices = Choice.all
   end
 
   def show
     @question = Question.find(params[:id])
+    @choices = @question.choices
+    # @choices = Choice.all
   end
 
   def create
