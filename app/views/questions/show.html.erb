@@ -1,0 +1,14 @@
+<h2>Show</h2>
+
+<%= @question.content%>
+
+
+
+<% @choices.each do |choice| %>
+
+<%= link_to choice.content %>
+
+<% end %>
+
+
+
