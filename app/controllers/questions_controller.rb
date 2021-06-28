@@ -10,6 +10,7 @@ class QuestionsController < ApplicationController
   end
 
   def show
+    # quiz_data = Question.create_with(10) #ランダムに問題が出るかなと思ったが、仕組みを理解できていないのでコメントあうと
     @question = Question.find(params[:id])
     @choices = @question.choices
     # @choices = Choice.all
